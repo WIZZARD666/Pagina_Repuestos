@@ -1,0 +1,552 @@
+/* 1. DEFINICIÓN DE VARIABLES DE COLOR EN :root */
+:root {
+    /* Paleta Principal (Azules) */
+    --color-fondo-oscuro: #001428;
+    --color-seccion-intermedio: #003d60;
+    --color-primario-cta: #0071a6;
+    --color-acento-claro: #00b1f7;
+    
+    /* Neutrales */
+    --color-blanco: #ffffff;
+    --color-gris-oscuro: #343a40; 
+    
+    /* Colores de Marca Fija */
+    --color-whatsapp: #25d366;
+    --color-instagram: #E1306C;
+}
+
+/* 2. ESTILOS BÁSICOS Y DE NAVEGACIÓN */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-fondo-oscuro); 
+    color: var(--color-blanco);
+}
+
+/* Franja de colores en el navbar */
+.color-strip {
+    width: 15px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.color-strip div {
+    flex-grow: 1;
+}
+
+/* Ajustes de Navbar para Bootstrap */
+.container-fluid {
+    flex-grow: 1;
+    padding-right: 0 !important;
+}
+.navbar-collapse {
+    flex-grow: 0;
+}
+.navbar-nav {
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.nav-item {
+    position: relative;
+}
+.nav-link {
+    padding: 1rem 1.2rem;
+    font-weight: bold;
+}
+
+/* 3. ESTILOS DE SECCIÓN HERO (Banner) */
+.hero-section {
+    background-color: var(--color-seccion-intermedio); 
+    background-image: url("ruta/a/tu/imagen/de/libreria.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 50px 0;
+}
+
+/* Capa oscura sobre la imagen */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 80%, transparent); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Estilo del recuadro de texto en el banner */
+.clip-box {
+    border: 4px solid var(--color-blanco); 
+    padding: 20px;
+    display: inline-block;
+    line-height: 0.8;
+}
+
+/* 4. ESTILOS DE PRODUCTOS Y TARJETAS */
+.product-card {
+    background-color: transparent; 
+    border: 1px solid var(--color-seccion-intermedio); 
+    padding: 15px;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    /* Necesario para el efecto de la imagen */
+    overflow: hidden; 
+    position: relative; /* Para posicionar el ícono de "Seleccionar/Favorito" */
+    border-radius: 8px; /* Pequeño detalle extra */
+}
+
+.product-card:hover {
+    border-color: var(--color-primario-cta);
+    box-shadow: 0 0 20px rgba(0, 113, 166, 0.6); /* Sombra más pronunciada */
+    transform: translateY(-10px); /* Pequeño levantamiento de la tarjeta */
+}
+
+/* Contenedor de la imagen para limitar el crecimiento (Crop) */
+.product-image-wrapper {
+    overflow: hidden;
+    height: 200px; /* Altura fija para todas las imágenes */
+    border-radius: 6px;
+    position: relative; /* Para el ícono de la esquina */
+    margin-bottom: 15px;
+}
+
+/* Imagen del producto: ¡El efecto de crecimiento! */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--color-primario-cta) !important; 
+    transition: transform 0.4s ease-in-out; /* Transición suave de crecimiento */
+}
+
+/* El crecimiento de la imagen al hacer hover en la tarjeta */
+.product-card:hover .product-image {
+    transform: scale(1.1); /* Hace que la imagen crezca un 10% */
+}
+
+/* --- Estilo del Ícono de la Esquina Superior Derecha (Check/Favorito) --- */
+.product-select-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    font-size: 24px;
+    color: var(--color-blanco);
+    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 75%, var(--color-primario-cta));
+    border: 2px solid var(--color-primario-cta);
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Lo hace redondo */
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s;
+    /* Agregamos una sombra bonita */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+/* Efecto visual al pasar el mouse por el ícono (opcional pero estético) */
+.product-select-icon:hover {
+    background-color: var(--color-primario-cta);
+    color: var(--color-blanco);
+    transform: scale(1.1);
+}
+
+.btn-contact-product {
+    background-color: var(--color-primario-cta); 
+    border: none;
+    color: var(--color-blanco); 
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+    transition: background-color 0.2s;
+}
+
+.btn-contact-product:hover {
+    background-color: #008cc0; /* Un azul un poco más claro */
+}
+
+
+/* 5. ESTILOS DEL MODAL DE BÚSQUEDA */
+.search-result-card {
+    background-color: var(--color-seccion-intermedio); 
+    border: 1px solid var(--color-primario-cta);
+    padding: 10px;
+    border-radius: 8px;
+    color: var(--color-blanco);
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+.search-result-card:hover {
+    background-color: color-mix(in srgb, var(--color-seccion-intermedio) 80%, var(--color-primario-cta));
+}
+
+.search-result-card img {
+    height: 60px;
+    width: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+    border: 1px solid white;
+}
+
+.search-result-card i {
+    color: white; 
+}
+
+/* 6. ESTILOS DEL MODAL DE CONTACTO (SÚPER HERMOSO) */
+
+/* Fondo general del modal de contacto */
+#contactModal .modal-content {
+    background-color: var(--color-seccion-intermedio) !important; 
+    border: 3px solid var(--color-primario-cta) !important; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); 
+}
+
+/* Ajustes del botón de cerrar */
+.btn-close-white {
+    filter: invert(1); 
+}
+
+/* Footer del modal */
+#contactModal .modal-footer {
+    border-top: none; 
+}
+#contactModal .btn-secondary {
+    background-color: var(--color-fondo-oscuro); 
+    border-color: var(--color-primario-cta);
+    color: var(--color-blanco);
+}
+
+/* --- ESTILOS DE ÍCONOS DE CONTACTO (CHULADAS) */
+.contact-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: var(--color-blanco);
+    padding: 15px 25px; 
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, background-color 0.3s, box-shadow 0.3s;
+    min-width: 150px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilo para el ÍCONO (Font Awesome: <i>) */
+.contact-link i {
+    font-size: 2.5em; 
+    transition: color 0.3s;
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.7)); 
+}
+
+/* Estilo del texto */
+.contact-link span {
+    letter-spacing: 0.5px;
+    margin-top: 8px !important;
+    font-size: 1.1em;
+}
+
+/* --- WhatsApp (Verde) --- */
+.whatsapp-link {
+    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 75%, var(--color-whatsapp));
+    border: 2px solid var(--color-whatsapp);
+}
+.whatsapp-link i {
+    color: var(--color-whatsapp);
+}
+.whatsapp-link:hover {
+    transform: translateY(-8px); 
+    background-color: var(--color-whatsapp); 
+    color: var(--color-gris-oscuro); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7); 
+}
+.whatsapp-link:hover i {
+    color: var(--color-blanco); 
+    filter: none;
+}
+
+/* --- Instagram (Magenta) --- */
+.instagram-link {
+    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 75%, var(--color-instagram));
+    border: 2px solid var(--color-instagram);
+}
+.instagram-link i {
+    color: var(--color-instagram);
+}
+.instagram-link:hover {
+    transform: translateY(-8px); 
+    background-color: var(--color-instagram); 
+    color: var(--color-blanco); 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.7);
+}
+.instagram-link:hover i {
+    color: var(--color-blanco); 
+    filter: none;
+}
+
+/*  Encabezado (Header)*/
+.brand-logo {
+    height: 48px;
+    width: auto;
+    margin-right: 12px;
+    border-radius: 6px;
+    background: white;
+    padding: 4px;
+}
+.site-brand-text strong {
+    font-size: 1.05rem;
+    color: var(--color-blanco);
+}
+.site-brand-text small {
+    color: #9fbcd8;
+    font-size: 0.75rem;
+}
+
+/* Ajustes visuales para los links del navbar */
+.navbar .nav-link {
+    color: var(--color-blanco) !important;
+    opacity: 0.95;
+}
+.navbar .nav-link.active {
+    /* No forzar color azul en estado 'active' - mantener blanco y usar hover para el acento */
+    color: var(--color-blanco) !important;
+}
+
+/* Pie de página (Footer) */
+.site-footer {
+    /* Más oscuro: predominio de fondo-oscuro con sutil pincel de sección-intermedio */
+    background: linear-gradient(180deg, color-mix(in srgb, var(--color-fondo-oscuro) 88%, var(--color-seccion-intermedio) 12%) 0%, var(--color-fondo-oscuro) 100%);
+    color: var(--color-blanco);
+    border-top: 1px solid rgba(0,0,0,0.45);
+}
+.site-footer h5, .site-footer h6 {
+    color: var(--color-blanco);
+}
+.site-footer .text-white-50 {
+    color: rgba(255,255,255,0.6) !important;
+}
+.footer-links li {
+    margin-bottom: 6px;
+}
+.footer-links a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.75);
+}
+.footer-links a:hover {
+    color: var(--color-primario-cta);
+}
+.footer-social .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+}
+
+/* Small screens: ajustar paddings y columnas del footer */
+@media (max-width: 767.98px) {
+    .site-footer .row > [class*='col-'] {
+        text-align: center;
+    }
+    .site-footer .footer-social {
+        justify-content: center;
+    }
+    .brand-logo { height: 40px; }
+}
+
+/* Pequeño refinamiento: botones y enlaces */
+.btn-primary {
+    background-color: var(--color-primario-cta);
+    border-color: var(--color-primario-cta);
+}
+.btn-primary:hover {
+    background-color: #008cc0;
+    border-color: #008cc0;
+}
+
+
+/* Header: aplicar paleta al header (gradiente, acentos y sombras) */
+.navbar {
+    background: linear-gradient(90deg, var(--color-fondo-oscuro) 0%, var(--color-seccion-intermedio) 100%) !important;
+    border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Si hay imagen de logo, la ocultamos y usamos texto de marca estilizado */
+.brand-logo { display: none; }
+.site-brand-text {
+    display: inline-block;
+    margin-right: 1rem;
+}
+.site-brand-text strong {
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    color: var(--color-blanco);
+    text-transform: uppercase;
+    text-shadow: 0 2px 18px rgba(0,0,0,0.6), 0 0 10px color-mix(in srgb, var(--color-acento-claro) 30%, transparent);
+}
+.site-brand-text small {
+    color: color-mix(in srgb, var(--color-primario-cta) 70%, var(--color-blanco));
+    font-size: 0.75rem;
+}
+
+/* Alinear el menú a la derecha en pantallas grandes */
+@media (min-width: 992px) {
+    .navbar .navbar-collapse {
+        justify-content: flex-end;
+    }
+    .navbar .navbar-nav {
+        gap: 1.2rem;
+    }
+}
+
+/* Estilo de enlaces en el header: usar acentos de la paleta para hover/activo */
+.navbar .nav-link {
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    position: relative;
+    color: var(--color-blanco) !important;
+    transition: color 160ms ease;
+}
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.03);
+    transition: background-color 200ms ease, opacity 200ms ease;
+    opacity: 1;
+}
+.navbar .nav-link:hover::after {
+    background: var(--color-primario-cta);
+    opacity: 1;
+}
+.navbar .nav-link.active {
+    /* Mantener el enlace activo en blanco; el acento ocurre solo en hover */
+    color: var(--color-blanco) !important;
+}
+.navbar .nav-link.active::after {
+    width: 0%;
+    background: transparent;
+}
+
+/* Hover: cambiar color de link a color primario al pasar el cursor */
+.navbar .nav-link:hover {
+    color: var(--color-primario-cta) !important;
+}
+
+/* Botones/íconos del header (búsqueda y carrito) */
+.search-toggle, #cart-icon-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    background: transparent;
+    position: relative;
+    transition: background-color 160ms ease, transform 140ms ease, color 160ms ease;
+}
+.search-toggle i, #cart-icon-link i {
+    color: var(--color-blanco);
+    transition: color 160ms ease;
+}
+/* línea debajo de los botones del header */
+.search-toggle::after, #cart-icon-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 100%;
+    height: 2px;
+    background: rgba(255,255,255,0.03);
+    transition: background-color 200ms ease, transform 160ms ease;
+}
+/* comportamiento: lupa igual que el carrito: fondo azul, icono blanco y leve elevación */
+.search-toggle:hover {
+    background: var(--color-primario-cta);
+    transform: translateY(-2px);
+}
+.search-toggle:hover i {
+    color: var(--color-blanco);
+}
+.search-toggle:hover::after {
+    background: var(--color-primario-cta);
+}
+/* carrito: fondo azul con icono blanco y también línea debajo */
+#cart-icon-link:hover {
+    background: var(--color-primario-cta);
+    transform: translateY(-2px);
+}
+#cart-icon-link:hover i {
+    color: var(--color-blanco);
+}
+#cart-icon-link:hover::after {
+    background: var(--color-primario-cta);
+}
+
+/* Acentos en iconos (search, cart) */
+.search-toggle { text-decoration: none !important; border-bottom: none !important; box-shadow: none !important; }
+.search-toggle i { color: var(--color-blanco); }
+.navbar .nav-link#cart-icon-link i { color: var(--color-blanco) !important; }
+
+/* Footer: estilo sombreado, separación y botones sociales cuadrados */
+.site-footer {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--color-fondo-oscuro) 88%, var(--color-seccion-intermedio) 12%) 0%, var(--color-fondo-oscuro) 100%);
+    border-top: 1px solid rgba(0,0,0,0.45);
+}
+.site-footer h5 {
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.site-footer .footer-links a {
+    color: rgba(255,255,255,0.58);
+}
+.site-footer .footer-links a:hover {
+    color: var(--color-primario-cta);
+}
+.footer-social .btn {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.08);
+    color: var(--color-blanco);
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 180ms ease, border-color 180ms ease, color 180ms ease, transform 140ms ease;
+}
+.footer-social .btn i { color: inherit; transition: color 180ms ease; }
+.footer-social .btn:hover {
+    background: var(--color-primario-cta);
+    border-color: var(--color-primario-cta);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+/* Copyright centered on small screens */
+@media (max-width: 575.98px) {
+    .site-footer .text-md-end { text-align: center !important; margin-top: .75rem }
+}
+
+/* Ajuste fino: espaciado entre secciones y líneas sutiles */
+.site-footer .container { max-width: 1200px; }
+.site-footer hr { border-color: rgba(255,255,255,0.03); }

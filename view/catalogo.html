@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo - LoorCars</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/catalogo.css">
+  </head>
+  <body>
+    <header>
+      <nav
+        class="navbar navbar-expand-lg navbar-dark p-0"
+        style="background-color: var(--color-fondo-oscuro);"
+      >
+        <div class="container-fluid align-items-center">
+          <a class="navbar-brand d-flex align-items-center me-3" href="index.html">
+            <img src="images/logo.png" alt="El Clip" class="brand-logo" onerror="this.style.display='none'" />
+            <div class="site-brand-text">
+              <strong>LoorCars</strong>
+              <small class="d-block text-white-50">Repuestos · Financiamiento</small>
+            </div>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="#navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link text-white" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white active" href="catalogo.html">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Mi Cuenta</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center ms-auto">
+            <button
+              class="btn btn-link text-white me-2 p-0 search-toggle"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+              aria-label="Buscar"
+            >
+              <i class="fas fa-search fa-lg"></i>
+            </button>
+
+            <a
+              class="nav-link text-white position-relative p-0"
+              href="#"
+              id="cart-icon-link"
+              aria-label="Carrito"
+            >
+              <i class="fas fa-shopping-bag fa-lg"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.7em"
+                >0</span
+              >
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="py-5" style="background-color: #003d60">
+      <div class="container">
+        <h2 class="text-white fw-bold mb-4">Catálogo Completo</h2>
+
+        <div class="mb-4">
+          <input
+            type="text"
+            id="catalogoSearchInput"
+            class="form-control"
+            placeholder="Buscar repuesto en el catálogo..."
+            style="
+              background-color: #001428;
+              border-color: #0071a6;
+              color: white;
+              padding: 1rem;
+              font-size: 1.1rem;
+            "
+          />
+        </div>
+
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"
+          id="full-catalogue-container"
+        >
+          </div>
+
+        <div class="d-flex justify-content-center mt-5">
+          <nav aria-label="Navegación de Páginas">
+            <ul class="pagination" id="pagination-container">
+              </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script> </body>
+    <script src="js/catalogo.js"></script>
+</html>

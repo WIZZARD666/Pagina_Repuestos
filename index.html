@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estructura Web - El Clip</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color: var(--color-fondo-oscuro);">
+        <div class="container-fluid align-items-center">
+          <a class="navbar-brand d-flex align-items-center me-3" href="#">
+            <img src="images/logo.png" alt="El Clip" class="brand-logo" onerror="this.style.display='none'" />
+            <div class="site-brand-text">
+              <strong>El Clip</strong>
+              <small class="d-block text-white-50">Arte · Libros · Tapas</small>
+            </div>
+          </a>
+
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase">
+              <li class="nav-item">
+                <a class="nav-link text-white active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="view/catalogo.html">Catálogo</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Contacto</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center ms-auto">
+            <button class="btn btn-link text-white me-2 p-0 search-toggle" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Buscar">
+              <i class="fas fa-search fa-lg"></i>
+            </button>
+
+            <a class="nav-link text-white position-relative p-0" href="#" id="cart-icon-link" aria-label="Carrito">
+              <i class="fas fa-shopping-bag fa-lg"></i>
+              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.7em">0</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <div class="row">
+          <div class="col-lg-6 col-md-8">
+            <h2 class="text-white fw-bold mb-3" style="font-size: 2rem">
+              SOMOS TODOS
+            </h2>
+            <div class="clip-box mb-4">
+              <div class="d-flex align-items-center">
+                <div class="me-4 text-start">
+                  <h1 class="text-white" style="font-size: 5rem">
+                    EL<br />C<span style="letter-spacing: -0.5rem">L</span
+                    ><br />I<br />P
+                  </h1>
+                </div>
+                <div class="text-start" style="line-height: 1.2">
+                  <h2 class="text-white fw-light" style="font-size: 2.5rem">
+                    ARTE<br />LIBROS<br />&amp; TAPAS
+                  </h2>
+                  <p class="text-white" style="font-size: 0.8rem">Desde 1974</p>
+                </div>
+              </div>
+            </div>
+
+            <p class="mb-4" style="font-size: 1.2rem">
+              Acompañándote a explorar y disfrutar del mágico universo de los
+              libros.
+            </p>
+
+            <a
+              href="#"
+              class="btn btn-light btn-lg fw-bold d-inline-flex align-items-center"
+            >
+              VER CATÁLOGO ONLINE
+              <i class="fas fa-arrow-right ms-2" style="color: #0071a6"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" style="background-color: #003d60">
+      <div class="container">
+        <div
+          class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4"
+          id="products-container"
+        ></div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="container py-5">
+        <div class="row gy-4">
+          <div class="col-md-4">
+            <h5 class="text-white">LoorCars</h5>
+            <p class="text-white-50 small">Loorcars es un negocio automotriz dedicado a la venta de repuestos  y financiamiento de vehículos, facilitando el acceso de manera rápida y sencilla.</p>
+            <p class="mb-0 small text-white-50">Dirección: Santiago de Chile · Chile</p>
+            <p class="small text-white-50">Tel: (+56) 9 3753 8719 · Email: loorfbm1@gmail.com</p>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="text-white">Enlaces</h6>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#" class="text-white-50">Inicio</a></li>
+              <li><a href="#" class="text-white-50">Catálogo</a></li>
+              <li><a href="#" class="text-white-50">Contacto</a></li>
+              <li><a href="#" class="text-white-50">Ayuda</a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="text-white">Síguenos</h6>
+            <div class="d-flex gap-2 footer-social">
+              <a href="https://wa.me/56937538719" target="_blank" class="btn btn-outline-light btn-sm" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.instagram.com/loorbarragan?igsh=MXBhM2pwemhleDd1ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-outline-light btn-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <hr class="border-top border-secondary my-4" />
+
+        <div class="row">
+          <div class="col-md-6 text-white-50 small">&copy; 2025 LoorCars. Todos los derechos reservados.</div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white-50 me-3">Política de Privacidad</a>
+            <a href="#" class="text-white-50">Términos de Servicio</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: #001428">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold text-white" id="searchModalLabel">
+              Buscar Repuestos
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control mb-3"
+              placeholder="Escribe el nombre del producto, ej: Filtro de aceite"
+              style="
+                background-color: #003d60;
+                border-color: #0071a6;
+                color: white;
+              "
+            />
+
+            <div
+              id="searchResults"
+              class="row row-cols-1 row-cols-md-2 g-3"
+              style="min-height: 200px"
+            >
+              <p
+                class="text-center text-white-50 mt-5"
+                id="initial-search-message"
+              >
+                Empieza a escribir para ver los productos disponibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content contact-modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold text-white" id="contactModalLabel">
+              ¡Pregúntanos por este producto!
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pt-2">
+            <p class="lead text-white-50">
+              Contáctanos directamente para verificar disponibilidad y realizar
+              tu pedido.
+            </p>
+
+            <div class="d-flex justify-content-center gap-4 mt-4">
+              <a
+                href="https://wa.me/56937538719?text=Hola,%20me%20interesa%20el%20producto:%20[TITULO_PRODUCTO]"
+                target="_blank"
+                class="contact-link whatsapp-link"
+                id="whatsapp-link"
+              >
+                <i class="fab fa-whatsapp fa-2x"></i>
+                <span class="d-block mt-1 fw-bold">WhatsApp</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/loorbarragan?igsh=MXBhM2pwemhleDd1ZA%3D%3D&utm_source=qr"
+                target="_blank"
+                class="contact-link instagram-link"
+                id="instagram-link"
+              >
+                <i class="fab fa-instagram fa-2x"></i>
+                <span class="d-block mt-1 fw-bold">Instagram</span>
+              </a>
+            </div>
+            <p class="mt-3 text-white-50 small">
+              ID del Producto: <span id="modal-product-id"></span>
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+  </body>
+</html>

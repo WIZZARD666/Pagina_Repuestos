@@ -1,0 +1,110 @@
+/* ... (Todo tu CSS anterior aquí) ... */
+
+/* -------------------------------------------
+   4. ESTILOS DE PRODUCTOS Y TARJETAS (Zoom/Logo)
+   ------------------------------------------- */
+.product-card {
+    background-color: transparent; 
+    border: 1px solid var(--color-seccion-intermedio); 
+    padding: 15px;
+    text-align: center;
+    transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    overflow: hidden; 
+    position: relative; 
+    border-radius: 8px; 
+}
+
+.product-card:hover {
+    border-color: var(--color-primario-cta);
+    box-shadow: 0 0 20px rgba(0, 113, 166, 0.6); 
+    transform: translateY(-5px); /* Pequeño levantamiento */
+}
+
+/* Contenedor de la imagen para limitar el crecimiento (Crop) */
+.product-image-wrapper {
+    overflow: hidden;
+    height: 200px; /* Altura fija para todas las imágenes */
+    border-radius: 6px;
+    position: relative; 
+    margin-bottom: 15px;
+}
+
+/* Imagen del producto: El efecto de crecimiento */
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid var(--color-primario-cta) !important; 
+    transition: transform 0.4s ease-in-out; /* Transición suave de crecimiento */
+}
+
+/* El crecimiento de la imagen al hacer hover en la tarjeta */
+.product-card:hover .product-image {
+    transform: scale(1.1); 
+}
+
+/* --- Estilo del Logo en la Esquina Superior Derecha --- */
+.product-corner-logo {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20; 
+    width: 40px; 
+    height: 40px; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; 
+    background-color: var(--color-primario-cta); 
+    padding: 5px; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6); 
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.product-corner-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+}
+
+.product-corner-logo:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.8);
+}
+
+/* -------------------------------------------
+   7. ESTILOS DE PAGINACIÓN (NUEVO)
+   ------------------------------------------- */
+.pagination .page-item {
+    margin: 0 4px; /* Espacio entre los botones */
+}
+
+.pagination .page-link {
+    color: var(--color-blanco);
+    background-color: var(--color-fondo-oscuro);
+    border: 1px solid var(--color-seccion-intermedio);
+    border-radius: 6px;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--color-primario-cta);
+    border-color: var(--color-primario-cta);
+    color: var(--color-blanco);
+}
+
+.pagination .page-item.active .page-link {
+    background-color: var(--color-acento-claro);
+    border-color: var(--color-acento-claro);
+    color: var(--color-blanco);
+    box-shadow: 0 0 10px rgba(0, 177, 247, 0.5);
+    z-index: 2; /* Para que se vea encima de los demás */
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color: var(--color-fondo-oscuro);
+    border-color: var(--color-seccion-intermedio);
+    color: #555;
+    cursor: not-allowed;
+}
+
