@@ -201,9 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
     productsContainer.querySelectorAll('.btn-contact-product').forEach(button => {
         button.addEventListener('click', handleContactClick);
     });
-    
-    // Ejecutar la configuración de favoritos para los productos cargados
-    setupFavoriteIcons();
 
 
     // ----------------------------------------------------
