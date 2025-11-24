@@ -163,7 +163,119 @@
         </div>
       </div>
     </footer>
+<div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content" style="background-color: #001428">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold text-white" id="searchModalLabel">
+              Buscar Repuestos
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control mb-3"
+              placeholder="Escribe el nombre del producto, ej: Filtro de aceite"
+              style="
+                background-color: #003d60;
+                border-color: #0071a6;
+                color: white;
+              "
+            />
 
+            <div
+              id="searchResults"
+              class="row row-cols-1 row-cols-md-2 g-3"
+              style="min-height: 200px"
+            >
+              <p
+                class="text-center text-white-50 mt-5"
+                id="initial-search-message"
+              >
+                Empieza a escribir para ver los productos disponibles.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="contactModal"
+      tabindex="-1"
+      aria-labelledby="contactModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content contact-modal-content">
+          <div class="modal-header border-0 pb-0">
+            <h5 class="modal-title fw-bold text-white" id="contactModalLabel">
+              ¡Pregúntanos por este producto!
+            </h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body text-center pt-2">
+            <p class="lead text-white-50">
+              Contáctanos directamente para verificar disponibilidad y realizar
+              tu pedido.
+            </p>
+
+            <div class="d-flex justify-content-center gap-4 mt-4">
+              <a
+                href="https://wa.me/56937538719?text=Hola,%20me%20interesa%20el%20producto:%20[TITULO_PRODUCTO]"
+                target="_blank"
+                class="contact-link whatsapp-link"
+                id="whatsapp-link"
+              >
+                <i class="fab fa-whatsapp fa-2x"></i>
+                <span class="d-block mt-1 fw-bold">WhatsApp</span>
+              </a>
+
+              <a
+                href="https://www.instagram.com/loorbarragan?igsh=MXBhM2pwemhleDd1ZA%3D%3D&utm_source=qr"
+                target="_blank"
+                class="contact-link instagram-link"
+                id="instagram-link"
+              >
+                <i class="fab fa-instagram fa-2x"></i>
+                <span class="d-block mt-1 fw-bold">Instagram</span>
+              </a>
+            </div>
+            <p class="mt-3 text-white-50 small">
+              ID del Producto: <span id="modal-product-id"></span>
+            </p>
+          </div>
+          <div class="modal-footer border-0">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="../js/bootstrap.bundle.min.js"></script>
     <script src="../js/catalogo.js"></script>
