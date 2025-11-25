@@ -457,6 +457,61 @@ body {
 .navbar .nav-link:hover {
     color: var(--color-primario-cta) !important;
 }
+/* 7. ESTILOS DE MÉTODOS DE PAGO */
+
+.payment-methods-section {
+    background-color: var(--color-seccion-intermedio); /* Fondo blanco para contraste */
+    color: var(--color-fondo-oscuro);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.payment-methods-section h2 {
+    color: var(--color-seccion-intermedio); /* Usa el azul intermedio para el título */
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.payment-methods-section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primario-cta); /* Línea de acento */
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.payment-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-blanco) !important;
+    border-radius: 12px !important;
+}
+
+.payment-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px var(--color-acento-claro) !important;
+}
+
+.payment-logo {
+    max-width: 100px; /* Tamaño del logo del banco */
+    height: auto;
+    border-radius: 5px;
+    /* Estilos temporales para que se vea algo mientras pones la imagen real */
+    background-color: #f8f9fa; 
+    border: 1px dashed #ced4da;
+    padding: 10px;
+    content: "LOGO AQUI";
+    font-size: 0.8rem;
+    color: #6c757d;
+}
+
+.payment-card .card-body ul li {
+    margin-bottom: 5px;
+}
+
+.payment-card .card-body ul li strong {
+    color: var(--color-fondo-oscuro);
+}
 
 /* Botones/íconos del header (búsqueda y carrito) */
 .search-toggle, #cart-icon-link {
