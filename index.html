@@ -110,62 +110,82 @@
       </div>
     </section>
 
-    <section class="payment-methods-section py-5 text-white">
-        <div class="container">
-            <h2 class="text-center fw-bold mb-5" style="color: var(--color-blanco);">Métodos de Pago Disponibles</h2>
-            
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                
-                <div class="col">
-                    <div class="card h-100 shadow border-0 text-center payment-card">
-                        <div class="card-body">
-                            <img src="img/Mercado2.jpeg" alt="Logo Copec Pay" class="payment-logo mb-3">
-                            <h5 class="card-title fw-bold" style="color: #0071a6;">Copec Pay</h5>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li><i class="fas fa-user-circle me-2" style="color: #0071a6;"></i> **Titular:** Lorwing Fernando Barragán Mujica</li>
-                                <li><i class="fas fa-id-card me-2" style="color: #0071a6;"></i> **RUT:** 27.807.486-2</li>
-                                <li><i class="fas fa-university me-2" style="color: #0071a6;"></i> **Tipo de Cuenta:** Cuenta Vista</li>
-                                <li><i class="fas fa-qrcode me-2" style="color: #0071a6;"></i> **N° de Cuenta:** 12780748601</li>
-                                <li><i class="fas fa-envelope me-2" style="color: #0071a6;"></i> **Email:** loorfbm@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <section class="payment-methods-section py-5">
+      <div class="container">
+        <h2 class="text-center fw-bold mb-2 text-white">Métodos de Pago Disponibles</h2>
+        <p class="text-center text-white-50 mb-5">Formas seguras y rápidas para que puedas pagar tus pedidos.</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
 
-                <div class="col">
-                    <div class="card h-100 shadow border-0 text-center payment-card">
-                        <div class="card-body">
-                            <img src="img/Mercado1.jpeg" alt="Logo Mercado Pago" class="payment-logo mb-3">
-                            <h5 class="card-title fw-bold" style="color: #0071a6;">Mercado Pago</h5>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li><i class="fas fa-user-circle me-2" style="color: #0071a6;"></i> **Titular:** Lorwing Fernando Barragán Mujica</li>
-                                <li><i class="fas fa-id-card me-2" style="color: #0071a6;"></i> **RUT:** 278074862</li>
-                                <li><i class="fas fa-university me-2" style="color: #0071a6;"></i> **Tipo de Cuenta:** Cuenta Vista</li>
-                                <li><i class="fas fa-qrcode me-2" style="color: #0071a6;"></i> **N° de Cuenta:** 1006133970</li>
-                                <li><i class="fas fa-envelope me-2" style="color: #0071a6;"></i> **Email:** loorfbm1@gmail.com</li>
-                            </ul>
-                        </div>
-                    </div>
+          <div class="col">
+            <div class="card h-100 shadow-sm payment-card">
+              <div class="card-body text-center">
+                <div class="logo-circle mx-auto mb-3">
+                  <img src="img/Mercado2.jpeg" alt="Logo Copec Pay" class="logo-img">
                 </div>
+                <h5 class="card-title fw-bold mb-2">Copec Pay</h5>
+                <p class="text-muted small mb-3">Pago rápido desde tu app Copec Pay</p>
 
-                <div class="col">
-                    <div class="card h-100 shadow border-0 text-center payment-card">
-                        <div class="card-body">
-                            <img src="img/Mercado3.jpeg" alt="Logo Banco Estado" class="payment-logo mb-3">
-                            <h5 class="card-title fw-bold" style="color: #0071a6;">Banco Estado</h5>
-                            <ul class="list-unstyled text-start small mt-3">
-                                <li><i class="fas fa-user-circle me-2" style="color: #0071a6;"></i> **Titular:** LORWING FERNANDO BARRAGAN MUJICA</li>
-                                <li><i class="fas fa-id-card me-2" style="color: #0071a6;"></i> **RUT:** 27807486-2</li>
-                                <li><i class="fas fa-university me-2" style="color: #0071a6;"></i> **Tipo de Cuenta:** Cuenta Corriente</li>
-                                <li><i class="fas fa-qrcode me-2" style="color: #0071a6;"></i> **N° de Cuenta:** 36300057831</li>
-                                <li><i class="fas fa-envelope me-2" style="color: #0071a6;"></i> **Email:** No especificado</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                <ul class="list-unstyled text-start small mb-3">
+                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> Lorwing Fernando Barragán Mujica</li>
+                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 27.807.486-2</li>
+                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Vista</li>
+                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="copec-cuenta">12780748601</span></li>
+                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> loorfbm@gmail.com</li>
+                </ul>
+
+                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+              </div>
             </div>
+          </div>
+
         
+          <div class="col">
+            <div class="card h-100 shadow-sm payment-card">
+              <div class="card-body text-center">
+                <div class="logo-circle mx-auto mb-3">
+                  <img src="img/Mercado1.jpeg" alt="Logo Mercado Pago" class="logo-img">
+                </div>
+                <h5 class="card-title fw-bold mb-2">Mercado Pago</h5>
+                <p class="text-muted small mb-3">Recibe pagos a tu cuenta Mercado Pago</p>
+
+                <ul class="list-unstyled text-start small mb-3">
+                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> Lorwing Fernando Barragán Mujica</li>
+                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 278074862</li>
+                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Vista</li>
+                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="mercado-cuenta">1006133970</span></li>
+                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> loorfbm1@gmail.com</li>
+                </ul>
+
+                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+              </div>
+            </div>
+          </div>
+
+          
+          <div class="col">
+            <div class="card h-100 shadow-sm payment-card">
+              <div class="card-body text-center">
+                <div class="logo-circle mx-auto mb-3">
+                  <img src="img/Mercado3.jpeg" alt="Logo Banco Estado" class="logo-img">
+                </div>
+                <h5 class="card-title fw-bold mb-2">Banco Estado</h5>
+                <p class="text-muted small mb-3">Transferencia o depósito bancario</p>
+
+                <ul class="list-unstyled text-start small mb-3">
+                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> LORWING FERNANDO BARRAGAN MUJICA</li>
+                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 27807486-2</li>
+                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Corriente</li>
+                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="banco-cuenta">36300057831</span></li>
+                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> No especificado</li>
+                </ul>
+
+                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
     <footer class="site-footer">
       <div class="container py-5">
