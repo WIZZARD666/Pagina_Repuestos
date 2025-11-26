@@ -59,6 +59,37 @@ body {
     padding: 1rem 1.2rem;
     font-weight: bold;
 }
+/* Esta regla asegura que el texto que escribes sea blanco, si no lo es ya */
+#searchInput, #catalogoSearchInput {
+    color: var(--color-blanco) !important;
+}
+
+/* ESTILO CLAVE: Esta es la regla específica para cambiar el color del texto 'placeholder'.
+   Usamos las pseudoclases específicas para cada navegador.
+*/
+
+#searchInput, #catalogoSearchInput::placeholder {
+    color: var(--color-blanco) !important; /* Texto blanco (o el color que prefieras) */
+    opacity: 0.75; /* Opcional: bajar un poco la opacidad para que se vea como sugerencia */
+}
+
+/* Soporte para navegadores basados en Webkit (Chrome, Safari) */
+#searchInput, #catalogoSearchInput::-webkit-input-placeholder {
+    color: var(--color-blanco) !important;
+    opacity: 0.75;
+}
+
+/* Soporte para Mozilla Firefox */
+#searchInput, #catalogoSearchInput:-moz-placeholder {
+    color: var(--color-blanco) !important;
+    opacity: 0.75;
+}
+
+/* Soporte para Internet Explorer */
+#searchInput, #catalogoSearchInput:-ms-input-placeholder {
+    color: var(--color-blanco) !important;
+    opacity: 0.75;
+}
 
 /* 3. ESTILOS DE SECCIÓN HERO (Banner) */
 .hero-section {
@@ -81,7 +112,9 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 80%, transparent); 
+    /* Gradiente sutil para darle profundidad, asegurando que el texto resalte */
+    background-color: rgba(0, 0, 0, 0.4); 
+    z-index: 1;
 }
 
 .hero-content {
@@ -89,6 +122,38 @@ body {
     z-index: 10;
 }
 
+/* Estilo para el color turquesa del logo */
+.text-accent-blue {
+    color: var(--color-acento-claro); /* #00b1f7 */
+}
+
+.text-white-75 {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Estilo para la imagen/logo */
+.hero-logo-image {
+    max-height: 350px; /* Limita el tamaño de la imagen */
+    width: 100%;
+    object-fit: contain; /* Asegura que la imagen se vea completa */
+    border-radius: 8px; /* Bordes suaves */
+    /* Pequeño efecto de luz que resalta el logo */
+    filter: drop-shadow(0 0 15px rgba(0, 177, 247, 0.5));
+}
+
+/* Estilo del botón (ajustamos el color primario para que se vea potente) */
+.hero-content .btn-primary {
+    background-color: var(--color-primario-cta);
+    border-color: var(--color-primario-cta);
+    transition: all 0.2s ease;
+}
+
+.hero-content .btn-primary:hover {
+    background-color: var(--color-acento-claro);
+    border-color: var(--color-acento-claro);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 113, 166, 0.5);
+}
 /* Estilo del recuadro de texto en el banner */
 .clip-box {
     border: 4px solid var(--color-blanco); 
@@ -647,3 +712,16 @@ body {
 /* Ajuste fino: espaciado entre secciones y líneas sutiles */
 .site-footer .container { max-width: 1200px; }
 .site-footer hr { border-color: rgba(255,255,255,0.03); }
+
+@media (max-width: 767.98px) {
+    .hero-section {
+        min-height: auto;
+        padding: 50px 0;
+    }
+    .hero-logo-image {
+        max-height: 250px;
+    }
+    .hero-content .logo-container {
+        padding: 10px;
+    }
+}

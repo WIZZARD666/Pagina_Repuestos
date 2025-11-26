@@ -17,89 +17,116 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark p-0" style="background-color: var(--color-fondo-oscuro);">
+      <nav
+        class="navbar navbar-expand-lg navbar-dark p-0"
+        style="background-color: var(--color-fondo-oscuro);"
+      >
         <div class="container-fluid align-items-center">
-          <a class="navbar-brand d-flex align-items-center me-3" href="#">
-            <img src="img/Logo.jpeg" alt="El Clip" class="brand-logo" onerror="this.style.display='none'" />
+          <a class="navbar-brand d-flex align-items-center me-3" href="index.html">
+            <img src="../img/Logo.jpeg" alt="El Clip" class="brand-logo" onerror="this.style.display='none'" />
             <div class="site-brand-text">
-              <strong>El Clip</strong>
-              <small class="d-block text-white-50">Arte · Libros · Tapas</small>
+              <strong>LoorCars</strong>
+              <small class="d-block text-white-50">Repuestos · Financiamiento</small>
             </div>
           </a>
 
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="#navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
 
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav mb-2 mb-lg-0 text-uppercase">
               <li class="nav-item">
-                <a class="nav-link text-white active" aria-current="page" href="#">Inicio</a>
+                <a class="nav-link text-white" aria-current="page" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="view/catalogo.html">Catálogo</a>
+                <a class="nav-link text-white active" href="view/catalogo.html">Catálogo</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-white" href="#">Contacto</a>
+                <a class="nav-link text-white" href="#footer">Contacto</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#pago">Metodos de Pago</a>
               </li>
             </ul>
           </div>
 
           <div class="d-flex align-items-center ms-auto">
-            <button class="btn btn-link text-white me-2 p-0 search-toggle" data-bs-toggle="modal" data-bs-target="#searchModal" aria-label="Buscar">
+            <button
+              class="btn btn-link text-white me-2 p-0 search-toggle"
+              data-bs-toggle="modal"
+              data-bs-target="#searchModal"
+              aria-label="Buscar"
+            >
               <i class="fas fa-search fa-lg"></i>
             </button>
 
-            <a class="nav-link text-white position-relative p-0" href="#" id="cart-icon-link" aria-label="Carrito">
+            <a
+              class="nav-link text-white position-relative p-0"
+              href="#"
+              id="cart-icon-link"
+              aria-label="Carrito"
+            >
               <i class="fas fa-shopping-bag fa-lg"></i>
-              <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.7em">0</span>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                style="font-size: 0.7em"
+                >0</span
+              >
             </a>
           </div>
         </div>
       </nav>
     </header>
 
-    <section class="hero-section">
-      <div class="hero-overlay"></div>
-      <div class="container hero-content">
-        <div class="row">
-          <div class="col-lg-6 col-md-8">
-            <h2 class="text-white fw-bold mb-3" style="font-size: 2rem">
-              SOMOS TODOS
-            </h2>
-            <div class="clip-box mb-4">
-              <div class="d-flex align-items-center">
-                <div class="me-4 text-start">
-                  <h1 class="text-white" style="font-size: 5rem">
-                    EL<br />C<span style="letter-spacing: -0.5rem">L</span
-                    ><br />I<br />P
-                  </h1>
-                </div>
-                <div class="text-start" style="line-height: 1.2">
-                  <h2 class="text-white fw-light" style="font-size: 2.5rem">
-                    ARTE<br />LIBROS<br />&amp; TAPAS
-                  </h2>
-                  <p class="text-white" style="font-size: 0.8rem">Desde 1974</p>
-                </div>
-              </div>
-            </div>
+<section class="hero-section hero-loorcars">
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <div class="row align-items-center">
+      <div class="col-lg-6 col-md-7 order-md-1 order-2 mt-4 mt-md-0">
+        <h1 class="text-white fw-bolder mb-3 display-4">
+          LOORCARS: <span class="text-accent-blue">TU ALIADO CONFIABLE</span>
+        </h1>
+        
+        <p class="lead text-white-75 mb-4">
+          Loorcars es tu aliado confiable en soluciones automotrices,
+          especializado en la venta de repuestos, accesorios y servicios
+          para tu vehículo. Con atención personalizada y garantía de calidad,
+          nos dedicamos a satisfacer las necesidades de nuestros clientes,
+          ofreciendo productos originales y alternativos para todo tipo de autos.
+          Nuestra experiencia y compromiso nos convierten en la mejor opción
+          para quienes buscan seguridad y confianza en el cuidado de su automóvil.
+        </p>
 
-            <p class="mb-4" style="font-size: 1.2rem">
-              Acompañándote a explorar y disfrutar del mágico universo de los
-              libros.
-            </p>
+        <a
+          href="view/catalogo.html"
+          class="btn btn-primary btn-lg fw-bold d-inline-flex align-items-center shadow-lg"
+        >
+          EXPLORAR REPUESTOS
+          <i class="fas fa-search ms-2"></i>
+        </a>
+        <p class="text-white-50 mt-3 small">
+          Productos originales y alternativos con garantía.
+        </p>
+      </div>
 
-            <a
-              href="#"
-              class="btn btn-light btn-lg fw-bold d-inline-flex align-items-center"
-            >
-              VER CATÁLOGO ONLINE
-              <i class="fas fa-arrow-right ms-2" style="color: #0071a6"></i>
-            </a>
-          </div>
+      <div class="col-lg-6 col-md-5 order-md-2 order-1 text-center">
+        <div class="logo-container p-3 p-md-5">
+            <img src="img/loor.jpeg" alt="LoorCars Logo" class="img-fluid hero-logo-image shadow-lg">
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
     <section class="py-5" style="background-color: #003d60">
       <div class="container">
@@ -110,91 +137,171 @@
       </div>
     </section>
 
-    <section class="payment-methods-section py-5">
+    <section class="payment-methods-section py-5" id="pago">
       <div class="container">
-        <h2 class="text-center fw-bold mb-2 text-white">Métodos de Pago Disponibles</h2>
-        <p class="text-center text-white-50 mb-5">Formas seguras y rápidas para que puedas pagar tus pedidos.</p>
+        <h2 class="text-center fw-bold mb-2 text-white">
+          Métodos de Pago Disponibles
+        </h2>
+        <p class="text-center text-white-50 mb-5">
+          Formas seguras y rápidas para que puedas pagar tus pedidos.
+        </p>
         <div class="row row-cols-1 row-cols-md-3 g-4">
-
           <div class="col">
             <div class="card h-100 shadow-sm payment-card">
               <div class="card-body text-center">
                 <div class="logo-circle mx-auto mb-3">
-                  <img src="img/Mercado2.jpeg" alt="Logo Copec Pay" class="logo-img">
+                  <img
+                    src="img/Mercado2.jpeg"
+                    alt="Logo Copec Pay"
+                    class="logo-img"
+                  />
                 </div>
                 <h5 class="card-title fw-bold mb-2">Copec Pay</h5>
-                <p class="text-muted small mb-3">Pago rápido desde tu app Copec Pay</p>
+                <p class="text-muted small mb-3">
+                  Pago rápido desde tu app Copec Pay
+                </p>
 
                 <ul class="list-unstyled text-start small mb-3">
-                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> Lorwing Fernando Barragán Mujica</li>
-                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 27.807.486-2</li>
-                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Vista</li>
-                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="copec-cuenta">12780748601</span></li>
-                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> loorfbm@gmail.com</li>
+                  <li>
+                    <i class="fas fa-user-circle me-2 text-primary"></i
+                    ><strong>Titular:</strong> Lorwing Fernando Barragán Mujica
+                  </li>
+                  <li>
+                    <i class="fas fa-id-card me-2 text-primary"></i
+                    ><strong>RUT:</strong> 27.807.486-2
+                  </li>
+                  <li>
+                    <i class="fas fa-university me-2 text-primary"></i
+                    ><strong>Tipo de Cuenta:</strong> Cuenta Vista
+                  </li>
+                  <li>
+                    <i class="fas fa-qrcode me-2 text-primary"></i
+                    ><strong>N° de Cuenta:</strong>
+                    <span id="copec-cuenta">12780748601</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope me-2 text-primary"></i
+                    ><strong>Email:</strong> loorfbm@gmail.com
+                  </li>
                 </ul>
 
-                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+                <div
+                  class="d-flex gap-2 justify-content-center payment-actions"
+                ></div>
               </div>
             </div>
           </div>
 
-        
           <div class="col">
             <div class="card h-100 shadow-sm payment-card">
               <div class="card-body text-center">
                 <div class="logo-circle mx-auto mb-3">
-                  <img src="img/Mercado1.jpeg" alt="Logo Mercado Pago" class="logo-img">
+                  <img
+                    src="img/Mercado1.jpeg"
+                    alt="Logo Mercado Pago"
+                    class="logo-img"
+                  />
                 </div>
                 <h5 class="card-title fw-bold mb-2">Mercado Pago</h5>
-                <p class="text-muted small mb-3">Recibe pagos a tu cuenta Mercado Pago</p>
+                <p class="text-muted small mb-3">
+                  Recibe pagos a tu cuenta Mercado Pago
+                </p>
 
                 <ul class="list-unstyled text-start small mb-3">
-                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> Lorwing Fernando Barragán Mujica</li>
-                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 278074862</li>
-                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Vista</li>
-                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="mercado-cuenta">1006133970</span></li>
-                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> loorfbm1@gmail.com</li>
+                  <li>
+                    <i class="fas fa-user-circle me-2 text-primary"></i
+                    ><strong>Titular:</strong> Lorwing Fernando Barragán Mujica
+                  </li>
+                  <li>
+                    <i class="fas fa-id-card me-2 text-primary"></i
+                    ><strong>RUT:</strong> 278074862
+                  </li>
+                  <li>
+                    <i class="fas fa-university me-2 text-primary"></i
+                    ><strong>Tipo de Cuenta:</strong> Cuenta Vista
+                  </li>
+                  <li>
+                    <i class="fas fa-qrcode me-2 text-primary"></i
+                    ><strong>N° de Cuenta:</strong>
+                    <span id="mercado-cuenta">1006133970</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope me-2 text-primary"></i
+                    ><strong>Email:</strong> loorfbm1@gmail.com
+                  </li>
                 </ul>
 
-                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+                <div
+                  class="d-flex gap-2 justify-content-center payment-actions"
+                ></div>
               </div>
             </div>
           </div>
 
-          
           <div class="col">
             <div class="card h-100 shadow-sm payment-card">
               <div class="card-body text-center">
                 <div class="logo-circle mx-auto mb-3">
-                  <img src="img/Mercado3.jpeg" alt="Logo Banco Estado" class="logo-img">
+                  <img
+                    src="img/Mercado3.jpeg"
+                    alt="Logo Banco Estado"
+                    class="logo-img"
+                  />
                 </div>
                 <h5 class="card-title fw-bold mb-2">Banco Estado</h5>
-                <p class="text-muted small mb-3">Transferencia o depósito bancario</p>
+                <p class="text-muted small mb-3">
+                  Transferencia o depósito bancario
+                </p>
 
                 <ul class="list-unstyled text-start small mb-3">
-                  <li><i class="fas fa-user-circle me-2 text-primary"></i><strong>Titular:</strong> LORWING FERNANDO BARRAGAN MUJICA</li>
-                  <li><i class="fas fa-id-card me-2 text-primary"></i><strong>RUT:</strong> 27807486-2</li>
-                  <li><i class="fas fa-university me-2 text-primary"></i><strong>Tipo de Cuenta:</strong> Cuenta Corriente</li>
-                  <li><i class="fas fa-qrcode me-2 text-primary"></i><strong>N° de Cuenta:</strong> <span id="banco-cuenta">36300057831</span></li>
-                  <li><i class="fas fa-envelope me-2 text-primary"></i><strong>Email:</strong> No especificado</li>
+                  <li>
+                    <i class="fas fa-user-circle me-2 text-primary"></i
+                    ><strong>Titular:</strong> LORWING FERNANDO BARRAGAN MUJICA
+                  </li>
+                  <li>
+                    <i class="fas fa-id-card me-2 text-primary"></i
+                    ><strong>RUT:</strong> 27807486-2
+                  </li>
+                  <li>
+                    <i class="fas fa-university me-2 text-primary"></i
+                    ><strong>Tipo de Cuenta:</strong> Cuenta Corriente
+                  </li>
+                  <li>
+                    <i class="fas fa-qrcode me-2 text-primary"></i
+                    ><strong>N° de Cuenta:</strong>
+                    <span id="banco-cuenta">36300057831</span>
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope me-2 text-primary"></i
+                    ><strong>Email:</strong> No especificado
+                  </li>
                 </ul>
 
-                <div class="d-flex gap-2 justify-content-center payment-actions"></div>
+                <div
+                  class="d-flex gap-2 justify-content-center payment-actions"
+                ></div>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </section>
-    <footer class="site-footer">
+    <footer class="site-footer" id="footer">
       <div class="container py-5">
         <div class="row gy-4">
           <div class="col-md-4">
             <h5 class="text-white">LoorCars</h5>
-            <p class="text-white-50 small">Loorcars es un negocio automotriz dedicado a la venta de repuestos 	y financiamiento de vehículos, facilitando el acceso de manera rápida y sencilla.</p>
-            <p class="mb-0 small text-white-50">Dirección: Santiago de Chile · Chile</p>
-            <p class="small text-white-50">Tel: (+56) 9 3753 8719 · Email: loorfbm1@gmail.com</p>
+            <p class="text-white-50 small">
+              Loorcars es un negocio automotriz dedicado a la venta de repuestos
+              y financiamiento de vehículos, facilitando el acceso de manera
+              rápida y sencilla.
+            </p>
+            <p class="mb-0 small text-white-50">
+              Dirección: Santiago de Chile · Chile
+            </p>
+            <p class="small text-white-50">
+              Tel: (+56) 9 3753 8719 · Email: loorfbm1@gmail.com
+            </p>
           </div>
 
           <div class="col-md-4">
@@ -210,8 +317,20 @@
           <div class="col-md-4">
             <h6 class="text-white">Síguenos</h6>
             <div class="d-flex gap-2 footer-social">
-              <a href="https://wa.me/56937538719" target="_blank" class="btn btn-outline-light btn-sm" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-              <a href="https://www.instagram.com/loorbarragan?igsh=MXBhM2pwemhleDd1ZA%3D%3D&utm_source=qr" target="_blank" class="btn btn-outline-light btn-sm" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a
+                href="https://wa.me/56937538719"
+                target="_blank"
+                class="btn btn-outline-light btn-sm"
+                aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/loorbarragan?igsh=MXBhM2pwemhleDd1ZA%3D%3D&utm_source=qr"
+                target="_blank"
+                class="btn btn-outline-light btn-sm"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
             </div>
           </div>
         </div>
@@ -219,7 +338,9 @@
         <hr class="border-top border-secondary my-4" />
 
         <div class="row">
-          <div class="col-md-6 text-white-50 small">&copy; 2025 LoorCars. Todos los derechos reservados.</div>
+          <div class="col-md-6 text-white-50 small">
+            &copy; 2025 LoorCars. Todos los derechos reservados.
+          </div>
           <div class="col-md-6 text-md-end">
             <a href="#" class="text-white-50 me-3">Política de Privacidad</a>
             <a href="#" class="text-white-50">Términos de Servicio</a>
