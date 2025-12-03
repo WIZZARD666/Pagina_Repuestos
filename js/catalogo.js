@@ -48,7 +48,7 @@ function createProductCardHTML(product) {
             <div class="product-card" data-id="${product.id}"> 
                 <div class="product-image-wrapper">
                     <div class="product-corner-logo">
-                        <img src="../img/Logo.jpeg" alt="Logo LoorCars" class="img-fluid"> 
+                        <img src="../img/Logocars1.png" alt="Logo LoorCars" class="img-fluid"> 
                     </div>
                     <img 
                         src="${product.imageUrl}" 

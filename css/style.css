@@ -90,6 +90,9 @@ body {
     color: var(--color-blanco) !important;
     opacity: 0.75;
 }
+#navbarNav .navbar-nav {
+    margin: 0 auto; /* Asegura que el menú esté centrado entre el logo y los íconos */
+}
 
 /* 3. ESTILOS DE SECCIÓN HERO (Banner) */
 .hero-section {
@@ -161,6 +164,12 @@ body {
     display: inline-block;
     line-height: 0.8;
 }
+.brand-logo {
+    /* Reducimos el tamaño por defecto */
+    height: 60px;
+    width: 120px; /* Reducido de 180px a 150px para escritorio */
+    transition: width 0.3s;
+}
 
 /* 4. ESTILOS DE PRODUCTOS Y TARJETAS */
 .product-card {
@@ -212,7 +221,7 @@ body {
     z-index: 20;
     font-size: 24px;
     color: var(--color-blanco);
-    background-color: color-mix(in srgb, var(--color-fondo-oscuro) 75%, var(--color-primario-cta));
+    background-color: color-mix(in srgb, var(--color-blanco) 75%, var(--color-blanco));
     border: 2px solid var(--color-primario-cta);
     width: 36px;
     height: 36px;
@@ -369,15 +378,7 @@ body {
     filter: none;
 }
 
-/* Encabezado (Header)*/
-.brand-logo {
-    height: 48px;
-    width: auto;
-    margin-right: 12px;
-    border-radius: 6px;
-    background: white;
-    padding: 4px;
-}
+
 .site-brand-text strong {
     font-size: 1.05rem;
     color: var(--color-blanco);
@@ -457,8 +458,6 @@ body {
     border-bottom: 1px solid rgba(255,255,255,0.03);
 }
 
-/* Si hay imagen de logo, la ocultamos y usamos texto de marca estilizado */
-.brand-logo { display: none; }
 .site-brand-text {
     display: inline-block;
     margin-right: 1rem;
@@ -723,5 +722,19 @@ body {
     }
     .hero-content .logo-container {
         padding: 10px;
+    }
+}
+/* Ajustes para dispositivos más pequeños (Tablets) */
+/* Ajustes para dispositivos medianos (Tablets) */
+@media (max-width: 992px) {
+    .brand-logo {
+        width: 120px; /* Reducido de 150px a 120px */
+    }
+}
+
+/* Ajustes para dispositivos pequeños (Móviles) */
+@media (max-width: 768px) {
+    .brand-logo {
+        width: 100px; /* Reducido de 120px a 100px para que no moleste al toggler */
     }
 }
